@@ -5,21 +5,21 @@
 class Foto < Formula
   desc "Yet another another publishing tool for minimalist photographers."
   homepage "https://github.com/waynezhang/foto"
-  version "1.0.7"
+  version "1.0.8"
   license "MIT License"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/waynezhang/foto/releases/download/v1.0.7/foto_Darwin_arm64.tar.gz"
-      sha256 "22db5ce44983a80fcca54743b5cb0b374cb4397a9f12475c218a0ad1eb3921ba"
+    if Hardware::CPU.intel?
+      url "https://github.com/waynezhang/foto/releases/download/v1.0.8/foto_Darwin_x86_64.tar.gz"
+      sha256 "4153e44f8db01387a8b25ff20afacd6463899fc9772a3a5cf37dda5ef7051f2a"
 
       def install
         bin.install "foto"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/waynezhang/foto/releases/download/v1.0.7/foto_Darwin_x86_64.tar.gz"
-      sha256 "39d0b5e2d01cda051992eecae1470d024ab25ab2a2ab48b09704b626159f2daa"
+    if Hardware::CPU.arm?
+      url "https://github.com/waynezhang/foto/releases/download/v1.0.8/foto_Darwin_arm64.tar.gz"
+      sha256 "26e052abf6c73e0e472e8408648cf9b7cf99b54d1a51e1739fef82644fc278fd"
 
       def install
         bin.install "foto"
@@ -28,17 +28,17 @@ class Foto < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/waynezhang/foto/releases/download/v1.0.7/foto_Linux_arm64.tar.gz"
-      sha256 "2c8f64913ebe1934d63e66cfc0bc614b05ed22ff1068d80c4ebd5a8d28f215fa"
+    if Hardware::CPU.intel?
+      url "https://github.com/waynezhang/foto/releases/download/v1.0.8/foto_Linux_x86_64.tar.gz"
+      sha256 "591416f379930d4741c24a8a1040b336d3211e6c44b2f67c73ff22258cf3958e"
 
       def install
         bin.install "foto"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/waynezhang/foto/releases/download/v1.0.7/foto_Linux_x86_64.tar.gz"
-      sha256 "b1ba32bb6c86a69e246a0140d735267088bee55cc1ef076442906db8d949cca9"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/waynezhang/foto/releases/download/v1.0.8/foto_Linux_arm64.tar.gz"
+      sha256 "d079814234dc06bd10b02c11aab12fe3db79538423cdd752d35126885d2cfcd7"
 
       def install
         bin.install "foto"
