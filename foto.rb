@@ -5,21 +5,21 @@
 class Foto < Formula
   desc "Yet another another publishing tool for minimalist photographers."
   homepage "https://github.com/waynezhang/foto"
-  version "1.1.0"
+  version "1.2.0"
   license "MIT License"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/waynezhang/foto/releases/download/v1.1.0/foto_Darwin_arm64.tar.gz"
-      sha256 "d400bf4e64f438e3c415e147d9310d9d12b677420777b86a03ad870fb5cea060"
+      url "https://github.com/waynezhang/foto/releases/download/v1.2.0/foto_Darwin_arm64.tar.gz"
+      sha256 "9debe15fa6142171246ba8cf16fe0ed93201dda378d5e87f37ee6d081dfacec2"
 
       def install
         bin.install "foto"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/waynezhang/foto/releases/download/v1.1.0/foto_Darwin_x86_64.tar.gz"
-      sha256 "35ac5a5d93c3a349f8b8998528333f562a24924269558f2e35de685511d05831"
+      url "https://github.com/waynezhang/foto/releases/download/v1.2.0/foto_Darwin_x86_64.tar.gz"
+      sha256 "cfd7148a4d0e95c44b1e35f23ca83e78ec33bf2107166bd3773619db795f6f13"
 
       def install
         bin.install "foto"
@@ -28,17 +28,17 @@ class Foto < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/waynezhang/foto/releases/download/v1.1.0/foto_Linux_arm64.tar.gz"
-      sha256 "cf85b2ac44e5fb3dddd86de6cccff7f7500dc64ec1543256ca9568f3d492cab5"
+    if Hardware::CPU.intel?
+      url "https://github.com/waynezhang/foto/releases/download/v1.2.0/foto_Linux_x86_64.tar.gz"
+      sha256 "90446544df2e4668bcf3a7ea63db339e95862c204d10f477790d132315a1542c"
 
       def install
         bin.install "foto"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/waynezhang/foto/releases/download/v1.1.0/foto_Linux_x86_64.tar.gz"
-      sha256 "580a42bc4522fec5b96f45c88b634c5d4b4155afccca7e431901bfc3a666aa80"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/waynezhang/foto/releases/download/v1.2.0/foto_Linux_arm64.tar.gz"
+      sha256 "ab4f5fe40b20fbfdc8353f726144f31940b4d5cb4d5977060a0e91dad511dbe3"
 
       def install
         bin.install "foto"
