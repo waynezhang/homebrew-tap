@@ -5,21 +5,21 @@
 class Foto < Formula
   desc "Yet another another publishing tool for minimalist photographers."
   homepage "https://github.com/waynezhang/foto"
-  version "1.2.1"
+  version "1.2.2"
   license "MIT License"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/waynezhang/foto/releases/download/v1.2.1/foto_Darwin_arm64.tar.gz"
-      sha256 "3f5283a5b3ddf761a8cfd42a8a695502db359bb4e7e56e04c40c7bc836f4337a"
+    if Hardware::CPU.intel?
+      url "https://github.com/waynezhang/foto/releases/download/v1.2.2/foto_Darwin_x86_64.tar.gz"
+      sha256 "0e5c6460aad69788a79bd1ab5ae2629dbcba3b1389d744bcf09eb2e25fd01b99"
 
       def install
         bin.install "foto"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/waynezhang/foto/releases/download/v1.2.1/foto_Darwin_x86_64.tar.gz"
-      sha256 "d9855bfca53c54967739c4e02c4bfe47093464bd34d6530ca0a740b29afb6047"
+    if Hardware::CPU.arm?
+      url "https://github.com/waynezhang/foto/releases/download/v1.2.2/foto_Darwin_arm64.tar.gz"
+      sha256 "217966af2c8799ac86cc03bfa731992501e358ce6990b82bca2453522655c83e"
 
       def install
         bin.install "foto"
@@ -29,16 +29,16 @@ class Foto < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/waynezhang/foto/releases/download/v1.2.1/foto_Linux_x86_64.tar.gz"
-      sha256 "587a0404424f1c1c4dd28ab6f870de1ecf4765800cadc50f66c2574771b495f9"
+      url "https://github.com/waynezhang/foto/releases/download/v1.2.2/foto_Linux_x86_64.tar.gz"
+      sha256 "3fb06303e8e6c30b655af41bfbb667bda178175f28615643047108735d0c9ae6"
 
       def install
         bin.install "foto"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/waynezhang/foto/releases/download/v1.2.1/foto_Linux_arm64.tar.gz"
-      sha256 "300fde5e7eceded7c042e0371938ec890e3a3fc6cc5eab8554b3bc7d0fc5eb24"
+      url "https://github.com/waynezhang/foto/releases/download/v1.2.2/foto_Linux_arm64.tar.gz"
+      sha256 "9070fdb95bfe8a54629676a181db4ec06d7d86e0e05cbf6a31d65cd7e957f4ca"
 
       def install
         bin.install "foto"
