@@ -5,21 +5,21 @@
 class Foto < Formula
   desc "Yet another another publishing tool for minimalist photographers."
   homepage "https://github.com/waynezhang/foto"
-  version "1.2.2"
+  version "1.3.0"
   license "MIT License"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/waynezhang/foto/releases/download/v1.2.2/foto_Darwin_x86_64.tar.gz"
-      sha256 "0e5c6460aad69788a79bd1ab5ae2629dbcba3b1389d744bcf09eb2e25fd01b99"
+    on_intel do
+      url "https://github.com/waynezhang/foto/releases/download/v1.3.0/foto_Darwin_x86_64.tar.gz"
+      sha256 "732ca738cf1e625396daecef95ede55c6ae8c9e0c3ea7dd8df6b79b7d73dfb66"
 
       def install
         bin.install "foto"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/waynezhang/foto/releases/download/v1.2.2/foto_Darwin_arm64.tar.gz"
-      sha256 "217966af2c8799ac86cc03bfa731992501e358ce6990b82bca2453522655c83e"
+    on_arm do
+      url "https://github.com/waynezhang/foto/releases/download/v1.3.0/foto_Darwin_arm64.tar.gz"
+      sha256 "80aff9b1ed5f462b7ab4f851b73dd24fd853914a7b7dc00acbddf43ca206f800"
 
       def install
         bin.install "foto"
@@ -28,20 +28,24 @@ class Foto < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/waynezhang/foto/releases/download/v1.2.2/foto_Linux_x86_64.tar.gz"
-      sha256 "3fb06303e8e6c30b655af41bfbb667bda178175f28615643047108735d0c9ae6"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/waynezhang/foto/releases/download/v1.3.0/foto_Linux_x86_64.tar.gz"
+        sha256 "751a96ce2eabf91692b579a5c3ce31976e85ed19a16f3927f594702933aa6851"
 
-      def install
-        bin.install "foto"
+        def install
+          bin.install "foto"
+        end
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/waynezhang/foto/releases/download/v1.2.2/foto_Linux_arm64.tar.gz"
-      sha256 "9070fdb95bfe8a54629676a181db4ec06d7d86e0e05cbf6a31d65cd7e957f4ca"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/waynezhang/foto/releases/download/v1.3.0/foto_Linux_arm64.tar.gz"
+        sha256 "a705890bd6b435fb1252b3d2de89597176e2f24c5ffde016ab283e4981cec579"
 
-      def install
-        bin.install "foto"
+        def install
+          bin.install "foto"
+        end
       end
     end
   end
