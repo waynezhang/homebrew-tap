@@ -11,4 +11,11 @@ class Yaskkserv2 < Formula
     bin.install "target/release/yaskkserv2"
     bin.install "target/release/yaskkserv2_make_dictionary"
   end
+
+  service do
+    run [opt_bin/"yaskkserv2", "~/.yaskkserv2/dictionary"]
+    keep_alive true
+    log_path var/"log/yaskkserv2.log"
+    error_log_path var/"log/yaskkserv2.log"
+  end
 end
