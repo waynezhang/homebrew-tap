@@ -13,7 +13,7 @@ class Yaskkserv2 < Formula
   end
 
   service do
-    run [opt_bin/"yaskkserv2", "~/.yaskkserv2/dictionary"]
+    run [opt_bin/"yaskkserv2", "~/.yaskkserv2/dictionary", "--no-daemonize"]
     keep_alive true
     log_path var/"log/yaskkserv2.log"
     error_log_path var/"log/yaskkserv2.log"
