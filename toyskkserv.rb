@@ -11,7 +11,7 @@ class Toyskkserv < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/waynezhang/toyskkserv/releases/download/v0.0.4/toyskkserv_Darwin_x86_64.tar.gz"
-      sha256 "af593613b62a75ee6de47dca4532c74c9a81b8379a50ca33706a54cfd869c5b0"
+      sha256 "53b6234b1cfef136ccd6381e50a9bbca03f7901bcf6447e63a3c43714c326baf"
 
       def install
         bin.install "toyskkserv"
@@ -19,7 +19,7 @@ class Toyskkserv < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/waynezhang/toyskkserv/releases/download/v0.0.4/toyskkserv_Darwin_arm64.tar.gz"
-      sha256 "e0c54b82358faa4363accdd93141ed44d842a4aebc864c547971d9a98133f937"
+      sha256 "528a0bd0f301b4a8024ac17e2d3160bb512dee11e45ece68d53be12102ef3ab8"
 
       def install
         bin.install "toyskkserv"
@@ -31,7 +31,7 @@ class Toyskkserv < Formula
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
         url "https://github.com/waynezhang/toyskkserv/releases/download/v0.0.4/toyskkserv_Linux_x86_64.tar.gz"
-        sha256 "f6bd435b72715d5c0cdc03be1f47a2b152ec915d8876b4f4657023f8ac9c13cd"
+        sha256 "064e2086977db8c88b9626e1270be11452c8a7faee2908b2cca78fda05176113"
 
         def install
           bin.install "toyskkserv"
@@ -41,7 +41,7 @@ class Toyskkserv < Formula
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
         url "https://github.com/waynezhang/toyskkserv/releases/download/v0.0.4/toyskkserv_Linux_arm64.tar.gz"
-        sha256 "96af3739da440478cee83eaf3607f4820d43312bc0cb17907e2f1aada214eb6b"
+        sha256 "faaea1927575b593263b2fbb2ba7a8642cedf6adf0b69399ce134e9ab8b7b18d"
 
         def install
           bin.install "toyskkserv"
