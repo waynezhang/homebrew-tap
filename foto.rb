@@ -5,21 +5,21 @@
 class Foto < Formula
   desc "Yet another another publishing tool for minimalist photographers."
   homepage "https://github.com/waynezhang/foto"
-  version "1.5.3"
+  version "1.6.0"
   license "MIT License"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/waynezhang/foto/releases/download/v1.5.3/foto_Darwin_x86_64.tar.gz"
-      sha256 "8fa53ddb7c9901b44a4c8c12391dc60ef3eb48b440e74bbd0ccf4de97cd31f30"
+      url "https://github.com/waynezhang/foto/releases/download/v1.6.0/foto_Darwin_x86_64.tar.gz"
+      sha256 "5a33cf71de5723fd2b39ed598266daf09314b06c5d66bdaa4099232e01b54dae"
 
       def install
         bin.install "foto"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/waynezhang/foto/releases/download/v1.5.3/foto_Darwin_arm64.tar.gz"
-      sha256 "a9a50877fda28a27a6fa6740c9019b81536b33c9d2c4b0687d051fd891f09a7d"
+      url "https://github.com/waynezhang/foto/releases/download/v1.6.0/foto_Darwin_arm64.tar.gz"
+      sha256 "0ea6f9a5e404f1ee41b6452335d5a002c61ff1cf32c959da563fc0ae0325f2b4"
 
       def install
         bin.install "foto"
@@ -30,8 +30,8 @@ class Foto < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/waynezhang/foto/releases/download/v1.5.3/foto_Linux_x86_64.tar.gz"
-        sha256 "443243577a044e0378b1a5e4f9b234b9063882306b5bd9ef0048a70395999c65"
+        url "https://github.com/waynezhang/foto/releases/download/v1.6.0/foto_Linux_x86_64.tar.gz"
+        sha256 "1027d1a50c2549b4f1aecec233654880a0d1854a55f6d0fd98b958f68c746804"
 
         def install
           bin.install "foto"
@@ -40,8 +40,8 @@ class Foto < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/waynezhang/foto/releases/download/v1.5.3/foto_Linux_arm64.tar.gz"
-        sha256 "4412adedeacdff5a5cb6533d3dca8fb38b58aad84f6d643586c4dfd4d264b055"
+        url "https://github.com/waynezhang/foto/releases/download/v1.6.0/foto_Linux_arm64.tar.gz"
+        sha256 "d0ee8243a65affba46aadb90c4de8f7a378e7b4a02a8c638717a6494ae759bba"
 
         def install
           bin.install "foto"
