@@ -5,21 +5,21 @@
 class Dotr < Formula
   desc "A simple dotfile manager for personal usage."
   homepage "https://github.com/waynezhang/dotr"
-  version "0.0.4"
+  version "0.0.5"
   license "MIT License"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/waynezhang/dotr/releases/download/v0.0.4/dotr_Darwin_x86_64.tar.gz"
-      sha256 "ffefe1695e4a0a49b877a4281401286d9dc18d2a742393ac248eec2c26e1b758"
+      url "https://github.com/waynezhang/dotr/releases/download/v0.0.5/dotr_Darwin_x86_64.tar.gz"
+      sha256 "c316564c003f7addf1e6a3194573faeca63a6ae46367c6023206ce372c7e144b"
 
       def install
         bin.install "dotr"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/waynezhang/dotr/releases/download/v0.0.4/dotr_Darwin_arm64.tar.gz"
-      sha256 "01f6afc0ab6779fc044da2ba189bec3a9be0047a69eb5df492bf4dfb1d6f3a11"
+      url "https://github.com/waynezhang/dotr/releases/download/v0.0.5/dotr_Darwin_arm64.tar.gz"
+      sha256 "930314b5c7aee2ae60abc73703801a50f8de6850cbd87274c4bba311770aeecc"
 
       def install
         bin.install "dotr"
@@ -30,8 +30,8 @@ class Dotr < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/waynezhang/dotr/releases/download/v0.0.4/dotr_Linux_x86_64.tar.gz"
-        sha256 "f11931cfbe69c7f193c59e6c60e94307c8e5cdc84033eb839bfd460ead5446a2"
+        url "https://github.com/waynezhang/dotr/releases/download/v0.0.5/dotr_Linux_x86_64.tar.gz"
+        sha256 "6005fe51fafc3224d6b53b9e4176c1642218c1217467035faf84050fa6c85aa4"
 
         def install
           bin.install "dotr"
@@ -40,8 +40,8 @@ class Dotr < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/waynezhang/dotr/releases/download/v0.0.4/dotr_Linux_arm64.tar.gz"
-        sha256 "f4b7a77d1a89cdc30dcfb3e6a24f6e509ec8ae1e8642be700fc734a380fd9743"
+        url "https://github.com/waynezhang/dotr/releases/download/v0.0.5/dotr_Linux_arm64.tar.gz"
+        sha256 "5ccfa70081769b013aa94bfa0f3f43566b020cfc117228a96890d0ac2f8ac66b"
 
         def install
           bin.install "dotr"
