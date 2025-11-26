@@ -5,21 +5,21 @@
 class Toyskkserv < Formula
   desc "A toy SKK skkseev. Just made this for fun."
   homepage "https://github.com/waynezhang/toyskkserv"
-  version "1.0.2"
+  version "1.0.3"
   license "MIT License"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/waynezhang/toyskkserv/releases/download/v1.0.2/toyskkserv_Darwin_x86_64.tar.gz"
-      sha256 "1ebb77a76f0fb6750110e7fa76e2cdf5e143ff8c8e6c9061efc0ee37c485c3c1"
+      url "https://github.com/waynezhang/toyskkserv/releases/download/v1.0.3/toyskkserv_Darwin_x86_64.tar.gz"
+      sha256 "3c09ba38c9fa3189df3250740b0d4cb7fce6fd9c73370872b627ae066bb832f3"
 
       def install
         bin.install "toyskkserv"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/waynezhang/toyskkserv/releases/download/v1.0.2/toyskkserv_Darwin_arm64.tar.gz"
-      sha256 "6ec5af48e763f9598e016103e96d012bdde6ffa2caa21cfa82fbf0c6c0e11968"
+      url "https://github.com/waynezhang/toyskkserv/releases/download/v1.0.3/toyskkserv_Darwin_arm64.tar.gz"
+      sha256 "07013809f302c5f47264c220b405fb28babf0a45aaed4ed7a079aaa4e372b04c"
 
       def install
         bin.install "toyskkserv"
@@ -29,15 +29,15 @@ class Toyskkserv < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/waynezhang/toyskkserv/releases/download/v1.0.2/toyskkserv_Linux_x86_64.tar.gz"
-      sha256 "be783d653080f60470b11ba9c9d1cc82cfaa9d176e5ffec7e3dde50e90a03881"
+      url "https://github.com/waynezhang/toyskkserv/releases/download/v1.0.3/toyskkserv_Linux_x86_64.tar.gz"
+      sha256 "8331c9cbaeb8a501a41abc97b15f44ae3706f3eef95c1bb074f96a5953fe2483"
       def install
         bin.install "toyskkserv"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/waynezhang/toyskkserv/releases/download/v1.0.2/toyskkserv_Linux_arm64.tar.gz"
-      sha256 "de86e798cc9c3636515be920cd9a297eabff1ba00b65fe2fa1edd65bb9c653a5"
+      url "https://github.com/waynezhang/toyskkserv/releases/download/v1.0.3/toyskkserv_Linux_arm64.tar.gz"
+      sha256 "464a12a472cb0f884a05834825e3fa3a0473dd75a68659f2ddb32a8d29b15b87"
       def install
         bin.install "toyskkserv"
       end
